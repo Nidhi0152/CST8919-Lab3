@@ -1,12 +1,12 @@
 {
   "properties": {
-    "displayName": "Deny-Public-IP",
+    "displayName": "Require-ProjectName-Tag",
     "policyType": "Custom",
     "mode": "All",
     "metadata": {
       "category": "Compliance",
       "createdBy": "0c064019-2111-4af9-8d93-3bda9387190c",
-      "createdOn": "2025-07-28T01:04:57.6204448Z",
+      "createdOn": "2025-07-28T01:03:58.5049927Z",
       "updatedBy": null,
       "updatedOn": null
     },
@@ -14,8 +14,8 @@
     "parameters": {},
     "policyRule": {
       "if": {
-        "field": "type",
-        "equals": "Microsoft.Network/publicIPAddresses"
+        "field": "[concat('tags[', 'ProjectName', ']')]",
+        "exists": "false"
       },
       "then": {
         "effect": "deny"
@@ -25,15 +25,15 @@
       "1.0.0"
     ]
   },
-  "id": "/subscriptions/ee6d1840-d090-4e11-94bc-fb6c42daa912/providers/Microsoft.Authorization/policyDefinitions/79c2d683-e9ac-4320-9566-3df33f87337c",
+  "id": "/subscriptions/ee6d1840-d090-4e11-94bc-fb6c42daa912/providers/Microsoft.Authorization/policyDefinitions/ce726129-4fc9-4690-a3f3-b232284a6602",
   "type": "Microsoft.Authorization/policyDefinitions",
-  "name": "79c2d683-e9ac-4320-9566-3df33f87337c",
+  "name": "ce726129-4fc9-4690-a3f3-b232284a6602",
   "systemData": {
     "createdBy": "desa0152@algonquinlive.com",
     "createdByType": "User",
-    "createdAt": "2025-07-28T01:04:57.5764452Z",
+    "createdAt": "2025-07-28T01:03:58.4253018Z",
     "lastModifiedBy": "desa0152@algonquinlive.com",
     "lastModifiedByType": "User",
-    "lastModifiedAt": "2025-07-28T01:04:57.5764452Z"
+    "lastModifiedAt": "2025-07-28T01:03:58.4253018Z"
   }
 }

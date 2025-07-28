@@ -1,12 +1,12 @@
 {
   "properties": {
-    "displayName": "Only-CanadaCentral",
+    "displayName": "Deny-Public-IP",
     "policyType": "Custom",
     "mode": "All",
     "metadata": {
       "category": "Compliance",
       "createdBy": "0c064019-2111-4af9-8d93-3bda9387190c",
-      "createdOn": "2025-07-28T00:59:58.3868915Z",
+      "createdOn": "2025-07-28T01:04:57.6204448Z",
       "updatedBy": null,
       "updatedOn": null
     },
@@ -14,10 +14,8 @@
     "parameters": {},
     "policyRule": {
       "if": {
-        "not": {
-          "field": "location",
-          "equals": "canadacentral"
-        }
+        "field": "type",
+        "equals": "Microsoft.Network/publicIPAddresses"
       },
       "then": {
         "effect": "deny"
@@ -27,15 +25,15 @@
       "1.0.0"
     ]
   },
-  "id": "/subscriptions/ee6d1840-d090-4e11-94bc-fb6c42daa912/providers/Microsoft.Authorization/policyDefinitions/ef5375fe-0494-4838-8f2e-67b94dff3afa",
+  "id": "/subscriptions/ee6d1840-d090-4e11-94bc-fb6c42daa912/providers/Microsoft.Authorization/policyDefinitions/79c2d683-e9ac-4320-9566-3df33f87337c",
   "type": "Microsoft.Authorization/policyDefinitions",
-  "name": "ef5375fe-0494-4838-8f2e-67b94dff3afa",
+  "name": "79c2d683-e9ac-4320-9566-3df33f87337c",
   "systemData": {
     "createdBy": "desa0152@algonquinlive.com",
     "createdByType": "User",
-    "createdAt": "2025-07-28T00:59:58.3427942Z",
+    "createdAt": "2025-07-28T01:04:57.5764452Z",
     "lastModifiedBy": "desa0152@algonquinlive.com",
     "lastModifiedByType": "User",
-    "lastModifiedAt": "2025-07-28T00:59:58.3427942Z"
+    "lastModifiedAt": "2025-07-28T01:04:57.5764452Z"
   }
 }
