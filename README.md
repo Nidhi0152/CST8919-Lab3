@@ -95,16 +95,22 @@ This lab focused on enforcing governance and compliance in Azure using **custom 
 📹 [Watch the video demo](https://youtu.be/363dLZ0euW0)
 
 ## Folder Structure
-/policy-lab
+
+```bash
+/policy-lab          
 │
 ├── policy-definitions/             
 │   ├── Only-CanadaCentral.json
 │   ├── Require-ProjectName-Tag.json
 │   └── Deny-Public-IP.json
 │
-├── screenshots/                  
+├── screenshots/                    
 │   ├── Vm-Failed.png
 │   ├── storage-failed.png
 │   ├── IpAddress-Failed.png
 │   └── Succesful-Attempt.png
+```
+
+
+
 
